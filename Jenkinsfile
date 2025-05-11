@@ -1,4 +1,4 @@
-Pipeline{
+pipeline{
     agent{
         label "master"
     }
@@ -15,7 +15,7 @@ Pipeline{
             }
         }
         stage("Build"){
-            step{
+            steps{
                 dir('cicd_demo'){
                     sh 'docker build -t nginx:latest .'
                     sh 'docker container run --name nginx -d -p 8080:80'
