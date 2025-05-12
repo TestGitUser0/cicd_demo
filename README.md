@@ -30,8 +30,6 @@ This project demonstrates a basic CI/CD pipeline using Jenkins and GitHub Webhoo
 Relevant part of the Jenkinsfile:
 
 groovy
-コピーする
-編集する
 stage("Build") {
     steps {
         dir('cicd_demo') {
@@ -58,8 +56,6 @@ stage("Build") {
 To allow GitHub Webhook to reach your local Jenkins, use ngrok:
 
 bash
-コピーする
-編集する
 ngrok http 8080
 Then configure your GitHub repository:
 
