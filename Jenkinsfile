@@ -17,6 +17,7 @@ pipeline{
         stage("Build"){
             steps{
                 dir('cicd_demo'){
+                    sh 'docker container ls'
                     if (env.BRANCH_NAME == 'main') {
                         echo "本番環境にデプロイ"
                         sh  '''
