@@ -1,6 +1,7 @@
 # CI/CD Demo with Jenkins and GitHub Webhook
 
-This project demonstrates a basic CI/CD pipeline using Jenkins and GitHub Webhooks. It automatically builds and runs an Nginx-based container depending on the pushed Git branch.
+## Overview
+This project demonstrates a simple CI/CD pipeline using Jenkins, GitHub Webhooks, and Docker.
 
 ## 🧱 Tech Stack
 
