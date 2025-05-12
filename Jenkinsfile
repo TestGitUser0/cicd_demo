@@ -18,7 +18,7 @@ pipeline{
             steps{
                 dir('cicd_demo'){
                     sh 'docker build -t nginx:latest .'
-                    sh 'docker container run -d -p 8080:80 nginx'
+                    sh 'docker container run -d -p 8081:80 nginx'
                 }
             }
         }
