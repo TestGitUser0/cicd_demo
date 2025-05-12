@@ -3,15 +3,19 @@
 ## Overview
 This project demonstrates a simple CI/CD pipeline using Jenkins, GitHub Webhooks, and Docker.
 
-## 🧱 Tech Stack
+## Project Purpose
+The purpose of this project is to demonstrate a simple CI/CD pipeline using Jenkins, GitHub Webhooks, and Docker.  
+It automatically builds and runs a containerized Nginx server when code is pushed to a GitHub repository.  
+This setup helps visualize how different branches can be deployed to different environments using basic branching logic.
 
+
+## 🧱 Tech Stack
 - **Jenkins** – CI/CD orchestration
 - **GitHub Webhook** – triggers Jenkins jobs on push events
 - **Docker** – containerizes and runs Nginx
 - **Nginx** – serves a static HTML page
 
 ## 🚀 Features
-
 - Triggered by `git push` to GitHub via webhook
 - Uses Jenkins pipeline defined in `Jenkinsfile`
 - Branch-based deployment behavior:
@@ -20,7 +24,6 @@ This project demonstrates a simple CI/CD pipeline using Jenkins, GitHub Webhooks
 - Displayed content: **"Hi nginx"**
 
 ## 📁 Project Structure
-
 ```text
 ├── Dockerfile         # Builds a minimal Nginx container
 ├── index.html         # Static HTML page displayed by Nginx
