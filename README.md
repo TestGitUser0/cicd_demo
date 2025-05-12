@@ -21,37 +21,13 @@ This project demonstrates a basic CI/CD pipeline using Jenkins and GitHub Webhoo
 ## 📁 Project Structure
 
 ```text
-.
 ├── Dockerfile         # Builds a minimal Nginx container
 ├── index.html         # Static HTML page displayed by Nginx
 ├── Jenkinsfile        # Pipeline logic with branch-based deployment
 └── README.md
-🧪 Jenkins Pipeline Logic
-Relevant part of the Jenkinsfile:
 
-groovy
-stage("Build") {
-    steps {
-        dir('cicd_demo') {
-            script {
-                sh 'docker container ls'
-                if (env.BRANCH_NAME == 'main') {
-                    echo "Deploying to production"
-                    sh '''
-                    docker build -t nginx-prod .
-                    docker container run -d -p 8080:80 nginx-prod
-                    '''
-                } else {
-                    echo "Deploying to development"
-                    sh '''
-                    docker build -t nginx-dev .
-                    docker container run -d -p 8081:80 nginx-dev
-                    '''
-                }
-            }
-        }
-    }
-}
+
+
 🌐 Exposing Jenkins (if running locally)
 To allow GitHub Webhook to reach your local Jenkins, use ngrok:
 
@@ -66,8 +42,9 @@ Payload URL: https://<your-ngrok-subdomain>.ngrok.io/github-webhook/
 Content Type: application/json
 
 Event Type: Just the push event
+```
 
-📝 How to Use
+## 📝 How to Use
 Set up Jenkins with Docker support
 
 Add this project as a GitHub repository
